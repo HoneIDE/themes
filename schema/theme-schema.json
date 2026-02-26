@@ -1,0 +1,190 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hone Theme",
+  "description": "Color theme definition for Hone (VSCode-compatible format)",
+  "type": "object",
+  "required": ["name", "type", "colors", "tokenColors"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name of the theme"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["dark", "light", "hc-dark", "hc-light"],
+      "description": "Theme base type"
+    },
+    "colors": {
+      "type": "object",
+      "description": "UI color customizations",
+      "properties": {
+        "editor.background": { "$ref": "#/definitions/color" },
+        "editor.foreground": { "$ref": "#/definitions/color" },
+        "editor.selectionBackground": { "$ref": "#/definitions/color" },
+        "editor.lineHighlightBackground": { "$ref": "#/definitions/color" },
+        "editor.findMatchBackground": { "$ref": "#/definitions/color" },
+        "editor.findMatchHighlightBackground": { "$ref": "#/definitions/color" },
+        "editorCursor.foreground": { "$ref": "#/definitions/color" },
+        "editorLineNumber.foreground": { "$ref": "#/definitions/color" },
+        "editorLineNumber.activeForeground": { "$ref": "#/definitions/color" },
+        "editorGutter.addedBackground": { "$ref": "#/definitions/color" },
+        "editorGutter.modifiedBackground": { "$ref": "#/definitions/color" },
+        "editorGutter.deletedBackground": { "$ref": "#/definitions/color" },
+        "editorIndentGuide.background": { "$ref": "#/definitions/color" },
+        "editorIndentGuide.activeBackground": { "$ref": "#/definitions/color" },
+        "editorWhitespace.foreground": { "$ref": "#/definitions/color" },
+        "editorBracketMatch.background": { "$ref": "#/definitions/color" },
+        "editorBracketMatch.border": { "$ref": "#/definitions/color" },
+        "activityBar.background": { "$ref": "#/definitions/color" },
+        "activityBar.foreground": { "$ref": "#/definitions/color" },
+        "activityBar.inactiveForeground": { "$ref": "#/definitions/color" },
+        "sideBar.background": { "$ref": "#/definitions/color" },
+        "sideBar.foreground": { "$ref": "#/definitions/color" },
+        "sideBarTitle.foreground": { "$ref": "#/definitions/color" },
+        "sideBarSectionHeader.background": { "$ref": "#/definitions/color" },
+        "titleBar.activeBackground": { "$ref": "#/definitions/color" },
+        "titleBar.activeForeground": { "$ref": "#/definitions/color" },
+        "titleBar.inactiveBackground": { "$ref": "#/definitions/color" },
+        "tab.activeBackground": { "$ref": "#/definitions/color" },
+        "tab.activeForeground": { "$ref": "#/definitions/color" },
+        "tab.inactiveBackground": { "$ref": "#/definitions/color" },
+        "tab.inactiveForeground": { "$ref": "#/definitions/color" },
+        "tab.border": { "$ref": "#/definitions/color" },
+        "statusBar.background": { "$ref": "#/definitions/color" },
+        "statusBar.foreground": { "$ref": "#/definitions/color" },
+        "statusBar.debuggingBackground": { "$ref": "#/definitions/color" },
+        "panel.background": { "$ref": "#/definitions/color" },
+        "panel.border": { "$ref": "#/definitions/color" },
+        "terminal.background": { "$ref": "#/definitions/color" },
+        "terminal.foreground": { "$ref": "#/definitions/color" },
+        "terminal.ansiBlack": { "$ref": "#/definitions/color" },
+        "terminal.ansiRed": { "$ref": "#/definitions/color" },
+        "terminal.ansiGreen": { "$ref": "#/definitions/color" },
+        "terminal.ansiYellow": { "$ref": "#/definitions/color" },
+        "terminal.ansiBlue": { "$ref": "#/definitions/color" },
+        "terminal.ansiMagenta": { "$ref": "#/definitions/color" },
+        "terminal.ansiCyan": { "$ref": "#/definitions/color" },
+        "terminal.ansiWhite": { "$ref": "#/definitions/color" },
+        "terminal.ansiBrightBlack": { "$ref": "#/definitions/color" },
+        "terminal.ansiBrightRed": { "$ref": "#/definitions/color" },
+        "terminal.ansiBrightGreen": { "$ref": "#/definitions/color" },
+        "terminal.ansiBrightYellow": { "$ref": "#/definitions/color" },
+        "terminal.ansiBrightBlue": { "$ref": "#/definitions/color" },
+        "terminal.ansiBrightMagenta": { "$ref": "#/definitions/color" },
+        "terminal.ansiBrightCyan": { "$ref": "#/definitions/color" },
+        "terminal.ansiBrightWhite": { "$ref": "#/definitions/color" },
+        "input.background": { "$ref": "#/definitions/color" },
+        "input.foreground": { "$ref": "#/definitions/color" },
+        "input.border": { "$ref": "#/definitions/color" },
+        "input.placeholderForeground": { "$ref": "#/definitions/color" },
+        "dropdown.background": { "$ref": "#/definitions/color" },
+        "dropdown.foreground": { "$ref": "#/definitions/color" },
+        "dropdown.border": { "$ref": "#/definitions/color" },
+        "button.background": { "$ref": "#/definitions/color" },
+        "button.foreground": { "$ref": "#/definitions/color" },
+        "button.hoverBackground": { "$ref": "#/definitions/color" },
+        "list.activeSelectionBackground": { "$ref": "#/definitions/color" },
+        "list.activeSelectionForeground": { "$ref": "#/definitions/color" },
+        "list.hoverBackground": { "$ref": "#/definitions/color" },
+        "list.focusBackground": { "$ref": "#/definitions/color" },
+        "scrollbar.shadow": { "$ref": "#/definitions/color" },
+        "scrollbarSlider.background": { "$ref": "#/definitions/color" },
+        "scrollbarSlider.hoverBackground": { "$ref": "#/definitions/color" },
+        "scrollbarSlider.activeBackground": { "$ref": "#/definitions/color" },
+        "badge.background": { "$ref": "#/definitions/color" },
+        "badge.foreground": { "$ref": "#/definitions/color" },
+        "minimap.background": { "$ref": "#/definitions/color" },
+        "minimap.selectionHighlight": { "$ref": "#/definitions/color" },
+        "minimap.findMatchHighlight": { "$ref": "#/definitions/color" },
+        "diffEditor.insertedTextBackground": { "$ref": "#/definitions/color" },
+        "diffEditor.removedTextBackground": { "$ref": "#/definitions/color" },
+        "notificationCenter.border": { "$ref": "#/definitions/color" },
+        "notifications.background": { "$ref": "#/definitions/color" },
+        "notifications.foreground": { "$ref": "#/definitions/color" },
+        "commandPalette.background": { "$ref": "#/definitions/color" },
+        "commandPalette.foreground": { "$ref": "#/definitions/color" }
+      },
+      "required": [
+        "editor.background",
+        "editor.foreground",
+        "editor.selectionBackground",
+        "editor.lineHighlightBackground",
+        "editorCursor.foreground",
+        "editorLineNumber.foreground",
+        "activityBar.background",
+        "activityBar.foreground",
+        "sideBar.background",
+        "sideBar.foreground",
+        "tab.activeBackground",
+        "tab.inactiveBackground",
+        "statusBar.background",
+        "statusBar.foreground",
+        "terminal.background",
+        "terminal.foreground",
+        "terminal.ansiBlack",
+        "terminal.ansiRed",
+        "terminal.ansiGreen",
+        "terminal.ansiYellow",
+        "terminal.ansiBlue",
+        "terminal.ansiMagenta",
+        "terminal.ansiCyan",
+        "terminal.ansiWhite"
+      ],
+      "additionalProperties": { "$ref": "#/definitions/color" }
+    },
+    "tokenColors": {
+      "type": "array",
+      "description": "Syntax token color rules",
+      "items": { "$ref": "#/definitions/tokenColor" }
+    },
+    "semanticHighlighting": {
+      "type": "boolean",
+      "description": "Enable semantic highlighting"
+    },
+    "semanticTokenColors": {
+      "type": "object",
+      "description": "Semantic token color overrides",
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "string" },
+          { "$ref": "#/definitions/tokenSettings" }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$",
+      "description": "Hex color (#RRGGBB or #RRGGBBAA)"
+    },
+    "tokenColor": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "scope": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } }
+          ]
+        },
+        "settings": { "$ref": "#/definitions/tokenSettings" }
+      },
+      "required": ["scope", "settings"]
+    },
+    "tokenSettings": {
+      "type": "object",
+      "properties": {
+        "foreground": { "$ref": "#/definitions/color" },
+        "background": { "$ref": "#/definitions/color" },
+        "fontStyle": {
+          "type": "string",
+          "pattern": "^(italic|bold|underline|strikethrough)( (italic|bold|underline|strikethrough))*$|^$"
+        }
+      }
+    }
+  }
+}
