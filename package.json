@@ -1,6 +1,6 @@
 {
   "name": "@honeide/themes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Color themes for Hone — VSCode-compatible theme collection",
   "files": [
     "themes/",
@@ -31,7 +31,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/honeide/hone-themes"
+    "url": "git+https://github.com/HoneIDE/themes.git"
   },
-  "keywords": ["hone", "theme", "vscode", "color-theme", "editor"]
+  "bugs": {
+    "url": "https://github.com/HoneIDE/themes/issues"
+  },
+  "homepage": "https://hone.codes",
+  "keywords": ["hone", "theme", "vscode", "color-theme", "editor"],
+  "publishConfig": {
+    "access": "public"
+  }
 }
