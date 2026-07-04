@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "typecheck": "tsc --noEmit",
     "validate": "tsx tools/validate-theme.ts",
     "import:vscode": "tsx tools/import-vscode-theme.ts",
     "import:tm": "tsx tools/import-tmtheme.ts",
